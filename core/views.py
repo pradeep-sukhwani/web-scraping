@@ -37,7 +37,8 @@ def get_data():
                 "class": "fact-sheet-label"})[0].find("p").text
             pest_content = pest_header.find_all("div", {"class": "pest-header-content"})[0].find_all("p")[1].text
             origin_content = ", ".join(pest_content.split("\n"))
-            origin_data = origin_content[origin_content.find("Origin"):origin_content.find("Distribution")]
+            origin_data = origin_content[origin_content.find("Origin"):origin_content.find("Distribution")].replace(
+                "Origin:", "")
             other_data = current_url_data.find("div", {
                 "id": "ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField"}).find("div", {
                 "id": "collapsefaq"}).find_all("div", {"class": "hide"})
