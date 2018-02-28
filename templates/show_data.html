@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Disease Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Disease Data</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Disease Name</th>
+                    <th>Image URL</th>
+                    <th>Pest Type</th>
+                    <th>Origin</th>
+                    <th>Legal Content</th>
+                    <th>Secure Any Content</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in dict_data.iteritems %}
+                    <tr>
+                        <td>{{ key }}</td>
+                        <td>{{ value.0 }}</td>
+                        <td>{{ value.1 }}</td>
+                        <td>{{ value.2 }}</td>
+                        <td>{{ value.3 }}</td>
+                        <td>{{ value.4 }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

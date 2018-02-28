@@ -1,0 +1,12 @@
+### Apple ###
+.DS_Store
+
+### Python ###
+*.pyc
+
+### Idea ###
+.idea
+
+### DB ###
+*.sql
+*db.sqlite3
